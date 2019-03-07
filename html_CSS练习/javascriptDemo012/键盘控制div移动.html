@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				background-color: black;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oDiv1 = document.getElementsByTagName("div")[0];
+				document.onkeydown=function()
+				{
+					switch (event.keyCode){										//event.keyCode键盘事件
+						case 37: oDiv1.style.left = oDiv1.offsetLeft-50+"px";	//37代表键盘左键
+							break;
+						case 38: oDiv1.style.top = oDiv1.offsetTop-50+"px";		//38代表键盘上键
+							break;
+						case 39: oDiv1.style.left=oDiv1.offsetLeft+50+"px";		//39代表键盘右键
+							break;
+						case 40: oDiv1.style.top=oDiv1.offsetTop+50+"px";		//40代表键盘下键
+							break;
+						default:
+							break;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

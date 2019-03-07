@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				function f1()
+				{
+					
+				}
+				var F6 = new f1();
+				//f1.prototype=F6;
+				alert(f1.prototype.prototype);
+				
+				//原型：方法的prototype值，就是在构造函数时起的名字
+				//在一个方法下面只有一个prototype值，而且只有方法有prototype
+				//网页预加载时会把所有有名字或者没名字的构造函数构造一遍
+				//被构造之后的方法，prototype肯定有一个值，所以不肯能拿到prototype下的prototype
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+		var oDiv = document.getElementById("div1");
+		oDiv.innerHTML = "123";
+		//innerHTML就是把后面的内容写进当前元素中
+		oDiv.innerHTML = "456";
+		//重复赋值，后面的会覆盖前面的
+		oDiv.innerHTML = "123<br />456";
+		//innerHTML中可以插入html标签
+		oDiv.innerHTML = "<b style='color: red;'>haha</b>";
+		//innerHTML中的标签是可以带属性的
+	</script>
+</html>

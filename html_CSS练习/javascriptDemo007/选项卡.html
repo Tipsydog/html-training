@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;height: 200px;
+				background-color: bisque;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var aBtn = document.getElementsByTagName("input");
+				var aDiv = document.getElementsByTagName("div");
+				
+				for(var i=0;i<aBtn.length;i++)
+				{
+					aBtn[i].index=i;								//自定义一个aBtn[i]的属性叫index，给其赋值
+					//index这里的属性名可以随便起，但是不能是保留字，一般都用index，方便他人维护
+					aBtn[i].onclick=function()					//循环让每个btn都有一个点击事件
+					{
+						for(var j=0;j<aDiv.length;j++)
+						{	
+							aDiv[j].style.display="none";		//让所有div都隐藏
+						}
+						aDiv[this.index].style.display="block";	
+						/* this指代的是点击事件发生时的那个按钮
+						 * this.index是定义好的数值，此处不能直接给i，否则无法判断是哪个按钮发生了点击事件
+						 */
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="一" />
+		<input type="button" value="二" />
+		<input type="button" value="三" />
+		<input type="button" value="四" />
+		<div style="display: block;">1111</div>
+		<div>2222</div>
+		<div>3333</div>
+		<div>4444</div>
+	</body>
+</html>

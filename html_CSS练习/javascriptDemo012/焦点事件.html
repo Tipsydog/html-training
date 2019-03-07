@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oTxt1 = document.getElementById("txt1");
+				oTxt1.onfocus=function()
+				{
+					alert("获取焦点");
+				}
+				oTxt1.onblur=function()
+				{
+					alert("失去焦点");
+				}
+				
+//				oTxt1.onfocusin=function()
+//				{
+//					alert("获取焦点");
+//				}
+//				oTxt1.onfocusout=function()
+//				{
+//					alert("失去焦点");
+//				}			
+				/*这部分是新版
+				  在IE下可执行，在其他浏览器不能且不报错
+				  时间：2018.11.2
+				 * */
+			}			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1" value="" />
+	</body>
+</html>

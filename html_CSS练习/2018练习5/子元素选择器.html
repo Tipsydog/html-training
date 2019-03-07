@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div>strong{
+				color: red;
+			}/*后代选择器,直接子元素，只改变div下第一层的strong*/
+			
+			div strong{
+				font-size: 48px;
+			}/*包含选择器,选择标签内部所有满足条件的标签*/
+		</style>
+	</head>
+	<body>
+		<div>
+			<strong>第一个</strong>
+			<span>
+				<strong>第二个</strong>
+			</span>
+			
+		</div>
+	</body>
+</html>

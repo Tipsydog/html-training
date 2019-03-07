@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="txt1" />+<input type="text" id="txt2" />
+		<input type="button" id="btn1" value="=" />
+		<input type="text" id="txt3" />
+	</body>
+	<script>
+		/*JavaScript获取html元素的一种方法：元素给了id的话，使用document.getElementById()*/
+		var oTxt1 = document.getElementById("txt1");
+		var oTxt2 = document.getElementById("txt2");
+		var oBtn1 = document.getElementById("btn1");
+		var oTxt3 = document.getElementById("txt3");
+		oBtn1.onclick=function()
+		//鼠标点击事件是onclick
+		{
+			var txt1Value = oTxt1.value;			//js中 . 的意思就是 的
+			var txt2Value = oTxt2.value;			//如果只有这两句结果是字符串相接
+			txt1Value = parseInt(txt1Value);
+			txt2Value = parseInt(txt2Value);
+			oTxt3.value = txt1Value+txt2Value;	
+			/*如果需要相加则需要转换数据类型*/
+		}
+	</script>
+</html>

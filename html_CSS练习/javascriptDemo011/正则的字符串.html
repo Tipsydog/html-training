@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="http://www.baidu.com" method="get">
+			<input type="text" pattern="a[abc]c" />		<!--中括号里只能出现一个，能提交aac,abc,acc-->
+			<input type="submit" value="提交"/>
+		</form>
+		<form action="http://www.baidu.com" method="get">
+			<input type="text" pattern="[a-z]+" />		<!--+号表示中括号内可出现多个-->
+			<input type="submit" value="提交"/>
+		</form><br />
+		<!--
+        	正则表达式的字符串操作
+        	1、[abc]
+        	2、范围：[a-z] [0-9]
+        	3、排除：[^a]
+        	4、组合：[a-zA-Z0-9]
+        	5、转义字符：
+        	.（一个点）：代表任意字符/ 		\.（右斜杠点）代表有点才能提交
+        	\d是只能出现数字，\D是不能出现数字
+        	\w就是[a-zA-Z0-9_] \W就是[a-zA-Z0-9_]都行
+        	\s空符号		\S除了空符号都行
+        -->
+        <form action="http://www.baidu.com" method="get">
+       		<input type="text" pattern="\d{2,5}" />		       			
+       		<!--表示必须全是数字，最少两个数字，最多5个数字。注意是大括号
+       			{n,m}n-m次之间
+       			{n,}n次及以上
+       			{n}只能n次
+       		-->
+       		<input type="text" pattern="\d?" />
+       		<!--问号代表只能是0次或者1次-->
+       		<input type="submit" value="提交"/>
+        </form><br />
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<frameset cols="20%,20%,20%,*" frameborder="yes" border="2" framespacing="30"><!--几个分割就写几个frame-->
+	<!--		
+	frameborder属性为yes时边框存在且可以拖动
+	border属性为边框宽度
+	framespacing属性为边框间空白距离，chrome和火狐不支持此属性
+	一般情况frameborder=no，border=0
+	-->
+	
+	<frame src="a.html" />
+	<frame src="b.html" />
+	<frame src="page1.html" scrolling="yes" noresize="noresize"/>		
+	<!--scrolling属性为滚动条，yes出现，no消失（页面不允许滚动），auto自动（一般不使用）-->
+	<!--noresize属性为不能改变框架大小（不能随意拖动改变框架大小）-->
+	<frame src="page2.html" />
+</frameset>

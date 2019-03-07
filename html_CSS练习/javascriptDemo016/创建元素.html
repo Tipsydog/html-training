@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oUl = document.getElementById("ul1");
+//				var oLi = document.createElement("li");
+//				//创建一个li标签
+//				oUl.appendChild(oLi);
+//				//将创建的标签插入oUl
+//				//这就是DOM插入标签的步骤
+				for(var i = 0;i<10000;i++)
+				{
+					var oLi = document.createElement("li");
+					oLi.innerHTML="当前是第"+i+"行";
+					oUl.appendChild(oLi);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<!--<li></li>-->
+		</ul>
+	</body>
+</html>

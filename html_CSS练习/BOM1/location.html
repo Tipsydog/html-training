@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 150px;
+				background-color: aqua;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.onclick=function(){
+					oDiv1.innerHTML=window.location.host;	//设置或获取当前窗口的域名以及端口
+					oDiv1.innerHTML=window.location.hostname	;	//获取当前窗口的域名
+					oDiv1.innerHTML=window.location.port;		//获取端口
+					oDiv1.innerHTML=window.location.protocol	;	//获取请求信息，一般是http://或者https
+					oDiv1.innerHTML=window.location.pathname;	//获取具体路径，若出现中文则变为特殊码
+					oDiv1.innerHTML=window.location.href;		//获取到网站的完整路径，above all
+					
+					window.location.href="http://www.baidu.com"
+					//一般使用window.location.href来跳转页面
+					
+					window.location.reload(true);		//刷新页面，里面写true/false/不写都可刷新
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

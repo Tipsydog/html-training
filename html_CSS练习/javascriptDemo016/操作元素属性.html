@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 300px;
+				height: 300px;
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oDiv = document.getElementById("div1");
+				oDiv.style.backgroundColor="green";
+				//最常用的方法
+				oDiv.style["backgroundColor"]="yellow";
+				//使用中括号改变元素属性
+				oDiv["style"]["backgroundColor"]="blue";
+				//凡是.都可以用[]代替
+				oDiv.setAttribute("style","background-color: black;");
+				//DOM设置属性值 
+				oDiv.removeAttribute("style");
+				//只会删除用setAttribute这种方法设置的属性，其他属性不会被删除
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 100%;
+				background-color: blue;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload=window.onresize=function()
+			//想要同时使用两个事件的时候,就用等号连接他们
+			{
+				var oDiv1 = document.getElementsByClassName("div1")[0];
+				oDiv1.style.height=oDiv1.offsetWidth/3+"px";
+				/*
+				 * offsetWidth是取元素的宽度，+"px"不要忘记
+				 * offsetTop：取元素距父级上部距离
+				 * offsetLeft：取元素距父级左部距离
+				 * offsetHeight：取元素的高度
+				 */
+			}
+		</script>
+	</head>
+	<body>
+		<div class="div1"></div>
+	</body>
+</html>

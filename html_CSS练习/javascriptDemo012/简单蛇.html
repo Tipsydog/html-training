@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				background-color: black;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oDiv = document.getElementsByTagName("div");
+				document.onkeydown=function()//如果要Firefox能兼容左边括号内要写ev，下面要var一个oEvent
+				{
+					//var oEvent = ev||event;	//ev||event顺序不能颠倒
+						for (var i=oDiv.length-1;i>0;i--)
+					{
+						oDiv[i].style.left = oDiv[i-1].offsetLeft+"px";
+						oDiv[i].style.top = oDiv[i-1].offsetTop+"px";
+					}				//后一个跟随前一个移动
+					switch (event.keyCode){										//event.keyCode键盘事件
+						case 37: oDiv[0].style.left = oDiv[0].offsetLeft-50+"px";	//37代表键盘左键
+							break;
+						case 38: oDiv[0].style.top = oDiv[0].offsetTop-50+"px";		//38代表键盘上键
+							break;
+						case 39: oDiv[0].style.left=oDiv[0].offsetLeft+50+"px";		//39代表键盘右键
+							break;
+						case 40: oDiv[0].style.top=oDiv[0].offsetTop+50+"px";		//40代表键盘下键
+							break;
+						default:
+							break;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

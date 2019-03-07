@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var a = 96;
+			var b = "16";
+			var c = a-b;
+			alert(typeof(c));
+			//数字减字符串/字符串减数字/字符串减字符串都是80，c是number类型
+			/*
+			 * 因为减法运算时，减号两边的数据会先转换成number类型
+			 * 但是任何带有非number的运算都会显示NaN(not a number)	
+			 */
+			var d = 16;
+			var e = "4";
+			var z = d+e;
+			alert(typeof(z));		//结果是164，加号的作用是连接字符串，z是string类型
+			
+			var f = 1;
+			var g = "1";
+			alert(f==g);			//true
+			/* f=g; 是给f赋予g的值
+			 * f===g; 结果为false，因为三等号判断前不会转换数据类型
+			 **/
+			//var h = true + 16;结果是17
+			var h = true + "16";	//true16,如果等式两边不能运算，boolean不会进行转换			
+			
+			alert(0.1+0.2);		//0.3000000000000004,这就是精度缺失
+			var i = 0.1;
+			var j = 0.2;
+			var k = 0.1*10+0.2*10;
+			var l = k/10;
+			alert(l);			//解决精度缺失的办法就是把原数据扩大几倍运算，再缩小相同倍数
+			
+			alert(undefined==null);		//true,本质上null和undefined无区别，null是从undefined中衍生出的数据类型
+			
+			console.log("这句话是在控制台输出信息，不在网页上显示")
+			
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var m = 123;
+			var n = 123;
+			alert(m==n);
+		</script>
+	</body>
+</html>

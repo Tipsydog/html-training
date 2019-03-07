@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oUl = document.getElementById("ul1");
+				var oA = oUl.getElementsByTagName("a");
+				
+					for(var i = 0;i<oA.length;i++)
+					{
+						oA[i].onclick=function()
+						{
+							this.parentNode.style.display = "none";			//隐藏元素，不是删除
+						}						
+					}
+				
+//				oA.onclick=function()
+//				{
+//					oA.parentNode.style.display= "none";
+//				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>aaaaaaa<a href="javascript:;">dafa</a></li>
+			<li>bbbbbbb<a href="javascript:;">dafa</a></li>
+			<li>ccccccc<a href="javascript:;">dafa</a></li>
+			<li>ddddddd<a href="javascript:;">dafa</a></li>
+			<li>eeeeeee<a href="javascript:;">dafa</a></li>
+			<li>fffffff<a href="javascript:;">dafa</a></li>
+		</ul>
+	</body>
+</html>

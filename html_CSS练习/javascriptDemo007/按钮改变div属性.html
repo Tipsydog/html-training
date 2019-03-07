@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;height: 100px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="btn1" />
+		<input type="button" id="btn2" value="btn2" />
+		<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+		var oBtn1 = document.getElementById("btn1");
+		var oBtn2 = document.getElementById("btn2");
+		var oDiv1 = document.getElementById("div1");
+		
+//		oBtn1.onclick=function(){
+//			oDiv1.style.width="400px";
+//		}
+//		oBtn2.onclick=function(){
+//			oDiv1.style.height="600px"
+//		}										如果分别写代码会很多
+
+		oBtn1.onclick=function(){
+			change("width","400px");
+		}
+		oBtn2.onclick=function(){
+			change("height","400px");
+		}
+		
+		function change(key,value)
+		{
+			oDiv1.style[key]=value;
+		}
+	</script>
+</html>

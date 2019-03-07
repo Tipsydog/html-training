@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				color: green;
+				line-height: 5px;
+			}
+			#cen1{
+				color: brown;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		document.write("<center>")				//给整段居中
+		for(var i = 0; i<5;i++){
+			for(var j = 0;j<=i;j++){
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+		for(var i = 0; i<10;i++){
+			for(var j = 0;j<=i;j++){
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+		for(var i = 0; i<15;i++){
+			for(var j = 0;j<=i;j++){
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+		document.write("</<center>")
+		
+		document.write("<center id='cen1'>")		//树干，此处的id='cen1'，一样能在css起作用
+		for(var i = 0; i<10;i++){
+			for(var j = 0;j<=3;j++){
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+		document.write("</<center>")			
+	</script>
+</html>

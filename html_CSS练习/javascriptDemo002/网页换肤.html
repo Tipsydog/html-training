@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" id="link1" href="css/css1.css"/>
+	</head>
+	<body>
+		<input type="button" id="pic1" value="背景一" />
+		<input type="button" id="pic2" value="背景二" />
+		<input type="button" id="pic3" value="背景三" />
+	</body>
+	<script>
+		var oPic1 = document.getElementById("pic1");
+		var oPic2 = document.getElementById("pic2");
+		var oPic3 = document.getElementById("pic3");
+		var oLink1 = document.getElementById("link1");
+		oPic1.onclick=function(){
+			oLink1.href="css/css1.css" 
+		}
+		oPic2.onclick=function(){
+			oLink1.href="css/css2.css" 
+		}
+		oPic3.onclick=function(){
+			oLink1.href="css/css3.css" 
+		}
+	</script>
+</html>

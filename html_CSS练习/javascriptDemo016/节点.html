@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{			
+			var oUl = document.getElementById("ul1");
+			alert(oUl.childNodes.length);				//childNodes只查找子节点，不会继续向下查找
+			for(var i = 0;i<oUl.childNodes.length;i++)
+			{
+				alert(oUl.childNodes[i].nodeType);
+			}
+			}
+			//childNodes在高版本浏览器中才能截取文本节点
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>
+				asds
+				<span></span>
+			</li>
+			<li></li>
+		</ul>
+		<!--
+			文本节点
+			<li></li>元素节点
+			文本节点
+			<li></li>元素节点
+			文本节点
+		-->
+		<!--
+			所以长度是5，文本节点type=3；元素节点type=1；注释type=8
+		-->
+	</body>
+</html>

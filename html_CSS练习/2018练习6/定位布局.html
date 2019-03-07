@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 600px;height: 800px;
+				background-color: #000000;
+				position: relative;
+				/*父属性需要position: relative，因为只有relative值才能用，margin属性，而absolute值无法和margin
+				 并存*/
+			}
+			.cont{
+				width: 60px;height: 80px;
+				background-color: white;
+				position: absolute;
+				left: 100px;bottom: 100px;
+				/*	定位布局
+				 * 改变的子模块用position: absolute;然后改数值，此模块根据他的父级移动
+				 * 设置了position: absolute的元素，不能再使用盒模型的相关属性以及浮动属性*/
+			}
+			.small{
+				width: 6px;height: 8px;
+				background-color: red;
+				position: absolute;right: 3px;top: 10px;
+				/* small的父级是上一个有position属性的div，所以small根据cont移动
+				 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="cont">
+				<div class="small"></div>
+			</div>
+		</div>
+	</body>
+</html>

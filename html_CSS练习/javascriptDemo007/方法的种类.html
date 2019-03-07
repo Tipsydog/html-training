@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;height: 100px;
+				background-color: black;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){								
+				/* 如果没有window.onload就会出现找不到div1的情况，因为程序是一行一行加载的
+				 * 一个页面只能有一个window.onload
+				 * 推荐将所有js代码写在window.onload中
+				 */
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.style.width="400px";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

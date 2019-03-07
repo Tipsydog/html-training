@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#click{
+				width: 100px;height: 50px;
+				background-color: aqua;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				line-height: 50px;
+			}
+			.div1{
+				width: 200px;height: 200px;
+				background-color: red;
+			}
+			.div2{
+				border-radius: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var aClick = document.getElementById("click");
+				var aClass = document.getElementsByClassName("div1")[0];		//这个[0]很重要
+				/* getElements获得的一定是个数组，要想获得具体div要加后面的位数 */
+				
+				aClick.onclick=function()
+				{
+					aClass.className="div1 div2";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="click">点击</div>
+		<div class="div1"></div>
+	</body>
+</html>

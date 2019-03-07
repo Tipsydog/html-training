@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 200px;height: 200px;
+				background-image: url(img/G0029585.JPG);
+				background-size: 100% 100%;
+				-webkit-box-reflect: right;		/*-webkit-box-reflect倒影但是只有Safari和chrome能用*/
+				/*-webkit内核被用于chrome和safa
+				 * Firefox用-moz
+				 * IE用-ms 
+				 * */
+				box-reflect: right;
+				-moz-box-reflect: right;
+				-ms-box-reflect: right;
+				-o-box-reflect: right;
+				-webkit-box-reflect: right;
+				/*如果要让所有浏览器支持就要写五行代码，一般来说CSS3的属性都要这么来写，这就叫做CSS Hack*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1"></div>
+	</body>
+</html>

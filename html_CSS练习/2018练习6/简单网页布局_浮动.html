@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.top{
+				width: 100%;height: 200px;
+				background-color: #000000;
+			}
+			.top_info1{
+				width: 900px;height: 200px;
+				background-color: #0000FF;
+				margin: 0 auto;
+				float: left;
+			}
+			.top_info2{
+				width: 20%;height: 200px;
+				background-color: #008000;
+				float: right;
+			}
+			.list1{
+				width: 100%;height: 50px;
+				background-color: #778899;
+				
+			}
+			.list2{
+				width: 900px;height: 50px;
+				background-color: #7FFF00;
+				margin: 0 auto;
+			}
+			.pic{
+				width: 900px;height: 300px;
+				background-color: #7FFFD4;
+				margin: 0 auto;
+			}
+			.acrt{
+				width: 900px;height: 600px;
+				background-color: #8B4513;
+				margin: 0 auto;
+			}
+			.acrt_info{
+				width: 300px;height: 600px;
+				background-color: #B8860B;
+				float: left;
+				margin:0 ;				
+			}
+			.footer{
+				width: 900px;height: 180px;
+				background-color: #D2691E;
+				margin: 0 auto;
+			}
+			.acrt_info_both{
+				width: 300px;height: 200px;
+				background-color: #FF0000;				
+			}
+			.acrt_info_middle{
+				width: 300px;height: 300px;
+				background-color: #FFFF00;
+			}
+			ul{
+				list-style: none;
+				margin: 0;
+			}
+			ul li{					
+				list-style: none;
+				float: left;
+				width: 100px;height: 50px;
+				line-height: 50px;
+				border-left: 1px solid white;
+				text-align: center;
+				font-size: 24px;
+				font-family: "微软雅黑";
+				
+			}
+			ul li a{
+				text-decoration: none;
+				color: white;
+			}
+			.list2 a{
+				display: block;
+				width: 100px;height: 50px;
+				float: left;
+				text-align: center;
+				border-left: 1px solid white ;
+				text-decoration: none;
+				color: white;
+				font-size: 24px;
+				font-family: "微软雅黑";
+				line-height: 50px;
+			}
+			/*可用ul-li实现,也可用a标签直接写,但需要用display行内元素转换为块级元素
+			 * display：block
+			 * display：inline
+			 display：none的效果是隐藏
+			 * */
+			
+		</style>
+	</head>
+	<body>
+		<div class="top">		<!--顶层-->
+			<div class="top_info1"></div>
+			<div class="top_info2"></div>
+		</div>
+		
+		<div class="list1">		<!--次顶层-->
+			<div class="list2">
+				<!--<ul>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+					<li><a href="index.html">RNG</a></li>
+				</ul>-->
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+				<a href="index.html">RNG</a>
+			</div>
+		</div>
+		
+		<div class="pic"></div>
+		
+		<div class="acrt">
+			<div class="acrt_info">
+				<div class="acrt_info_both">1</div>
+				<div class="acrt_info_both">2</div>
+				<div class="acrt_info_both">3</div>
+			</div>
+			<div class="acrt_info">
+				<div class="acrt_info_middle"></div>
+				<div class="acrt_info_middle"></div>
+			</div>
+			<div class="acrt_info">
+				<div class="acrt_info_both">1</div>
+				<div class="acrt_info_both">2</div>
+				<div class="acrt_info_both">3</div>
+			</div>
+		</div>
+		
+		<div class="footer"></div>
+	</body>
+</html>

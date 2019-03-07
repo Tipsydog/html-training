@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oUl = document.getElementById("ul1");
+				var oTxt1 = document.getElementById("txt1");
+				var oBtn1 = document.getElementById("btn1");
+				var oLi = document.getElementsByTagName("li");		//为了在前面插入设的值
+				
+				oBtn1.onclick=function()
+				{
+					var aLi = document.createElement("li");
+					aLi.innerHTML=oTxt1.value;
+					//oUl.appendChild(oLi);
+					
+					//oUl.insertBefore(aLi,oLi[0]);	
+					//在指定元素前面插入oUl.insertBefore(插入的数据,插入的位置);此方法在IE6-8会报错
+					
+					//兼容性写法
+					if(oLi.length==0)
+					{
+						oUl.appendChild(aLi)
+					}else{
+						oUl.insertBefore(aLi,oLi[0]);
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1" /><input type="button" id="btn1" value="添加" />
+		<ul id="ul1">
+			<!--<li></li>-->
+		</ul>
+	</body>
+</html>

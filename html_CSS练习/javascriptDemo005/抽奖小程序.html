@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/img01.png" id="img" /><br />
+		<input type="button" id="start" value="开始" />
+		<input type="button" id="end" value="停!" />
+	</body>
+	<script type="text/javascript">
+		var oImg = document.getElementById("img");
+		var oStart = document.getElementById("start");
+		var oEnd = document.getElementById("end");
+		var i = 1;			//为什么这个i不能写在setInterval内
+		var timer;
+		
+		oStart.onclick=function(){
+			clearInterval(timer);
+			timer = setInterval(function()
+			{				
+				if(i<10){
+					i="0"+i;
+				}
+				oImg.src="img/img"+i+".png";
+				i++;
+				if(i==17){
+					i=1;
+				}				
+			},100)
+		}
+		
+		oEnd.onclick=function()
+		{
+			clearInterval(timer);
+			oImg.src="img/img08.png";		//给了这行以后所有暂停都会显示img08，抽奖作弊
+		}
+		
+	</script>
+</html>

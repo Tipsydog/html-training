@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				function tiger(){
+					this.eat=function(){
+						alert("会吃人");
+					}
+				}//老虎属性会吃人
+				var hu = tiger();
+				//hu.eat();
+				
+				function cat(){
+					this.climb=function(){
+						alert("会上树");
+					}
+				}//猫属性会上树
+				var bosi = new cat();
+				//bosi.climb();
+				
+				//现在想让老虎会上树
+				/*
+				 * 执行tiger函数，使用cat的某一个具体属性作为原型，并创建老虎
+				 * 在js中面向对象的继承 
+				 */
+				tiger.prototype = new cat();
+				var huanan = new tiger();				
+				huanan.climb();
+				// _proto_:原型链，由一个原型指向另一个原型，由原型指向原型
+				//最后一个指向null
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

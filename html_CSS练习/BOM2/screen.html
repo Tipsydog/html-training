@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 800px;
+				height: 150px;
+				background-color: aqua;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.onclick=function(){
+					oDiv1.innerHTML=window.screen.availHeight;
+					//获取电脑屏幕除了任务栏的高度
+					oDiv1.innerHTML=window.screen.availWidth;
+					//获取电脑屏幕除了任务栏的宽度
+					oDiv1.innerHTML=window.screen.height;
+					//获取当前电脑分辨率的最大高度
+					oDiv1.innerHTML=window.screen.width;
+					//获取当前电脑分辨率的最大宽度
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

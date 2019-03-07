@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*[href][title]{
+				text-decoration: none;/*取消超链接的下滑线*/
+			}
+			
+			*[href="https://www.qq.com"]{
+				text-decoration: blink;
+				color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://www.baidu.com">百度</a><br />
+		<a href="http://www.taobao.com" title="123">淘宝</a><br />
+		<a href="https://www.qq.com">腾讯</a><br />
+		<!--
+			*[属性]改变所有属性的样式
+			*[属性][title]改变属性下同名title的样式
+			*[地址]仅改变此项
+			*后面不跟任何属性，页面中所有表情全部执行此样式
+		-->
+	</body>
+</html>

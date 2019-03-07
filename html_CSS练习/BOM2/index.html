@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 800px;
+				height: 150px;
+				background-color: aqua;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.onclick=function(){
+					oDiv1.innerHTML=window.navigator.appCodeName;	//返回浏览器代码名，所有（IE4+）都是Mozilla
+					oDiv1.innerHTML=window.navigator.appName;	//返回浏览器名称，所有（IE4+）都是Netscapes
+					oDiv1.innerHTML=window.navigator.userAgent;//返回浏览器信息
+					oDiv1.innerHTML=window.navigator.language;//返回浏览器语言
+					oDiv1.innerHTML=window.navigator.vendor;
+					//只能在chrome下使用，其他都是undefined
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

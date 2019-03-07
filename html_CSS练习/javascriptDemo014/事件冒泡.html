@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html onclick="alert('html')">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body onclick="alert('body')">
+		<div onclick="alert('div')">
+			<input type="button" value="sf" onclick="alert('btn')" />
+		</div>
+	</body>
+	<!--事件在触发之后会向上一层一层反推，也就是冒泡，直到能接受这个事件的最大元素-->
+</html>

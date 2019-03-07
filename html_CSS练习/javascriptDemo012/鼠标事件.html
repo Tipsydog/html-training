@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 300px;height: 300px;
+				background-color: blanchedalmond;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oDiv1 = document.getElementsByClassName("div1")[0];
+				oDiv1.onclick=function()
+				{
+					//alert("单击事件");
+					oDiv1.style.backgroundColor="red";
+					/* 一个单击事件是由两部分组成，鼠标按下和鼠标抬起
+					 * 必须同时满足两个部分都发生事件才会被触发
+					 * 例如如果单击在div内，抬起在div外，则事件不会发生
+					 */
+				}
+				oDiv1.ondblclick=function()
+				{
+					//alert("双击事件");
+					oDiv1.style.backgroundColor="blue";
+				}
+				//两个事件同时存在都会触发
+			}
+		</script>
+	</head>
+	<body>
+		<div class="div1"></div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				function t1()
+				{
+					var age = 20;
+					function t2()
+					{
+						alert(age)
+					}
+					t2;
+					return t2;
+				}
+				var result = t1();
+				result();
+				/*
+				 * 闭包就是能够读取其他函数内部变量的函数，函数没有被释放，整条作用域链上的局部变量都将得到保留。
+由于在javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成‘定义在一个函数内部的函数’。
+所以，在本质上，闭包就是将函数内部和函数外部连接的一座桥梁。
+				 */
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

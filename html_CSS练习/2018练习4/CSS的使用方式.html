@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--
+        1、rel="stylesheet"：引入文件是用于改变样式的，不可删除
+        2、type="text/css"声明引入文件的内容是css文本
+        3、href="css/style.css"；路径
+        -->
+		<style type="text/css">
+			/*
+			 style标签的type属性是确定其中代码的类型,可省略
+			test/css声明下面的内容属于css文本
+			*/
+			span{
+				/*span是选择器，会从HTML文档中找到我们要改变样式的HTML元素*/
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="font-size: 50px;">内联式样式测试50px</p><!--第一种-->
+		
+		<span>嵌入式样式测试，也叫内页样式40px</span>
+		
+		<div>外联式样式测试，也叫外部样式30px</div>
+	</body>
+</html>

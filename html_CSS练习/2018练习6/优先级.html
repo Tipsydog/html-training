@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				font-size: 50px;
+			}
+			span{
+				color: red !important;
+			}
+			
+			.span1{
+				color: chocolate;
+			}
+			#haha{
+				color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="haha" class="span1" style="color: green;">hafhaphfa</span>
+		<!--优先级：
+		!important < 标签< class < id < 行内样式
+			要提升优先级用“！important”
+		权值：
+		!important是+∞
+		标签=1
+		class=10
+		id=100
+		行内=1000
+			-->
+	</body>
+</html>

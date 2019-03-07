@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				alert(typeof (null)=== typeof(window));
+				//两个都是object，所以是true
+				alert([1,2,3]===[1,2,3]);
+				//J结果是false因为比较数组时会顺带比较数组的地址
+				//如果要比较数组值，要用循环把每一个数字拿出来比较
+				alert(NaN==NaN);
+				//结果是false，记住NaN不等于NaN
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{			
+			var oUl = document.getElementById("ul1");
+			var oLi = oUl.getElementsByTagName("li");
+			
+			for(var i = 0;i<oUl.children.length;i++)
+			{
+				oLi[i].style.backgroundColor="red";			//如果是children就不会有childNodes的兼容性
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li></li>
+			<li></li>
+		</ul>		
+	</body>
+</html>

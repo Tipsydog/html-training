@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="inp1" />
+		<select id="sel">
+			<option value="1">111111</option>
+			<option value="2">222222</option>
+			<option value="3">333333</option>
+			<option value="4">444444</option>
+			<option value="5">555555</option>
+			<option value="6">666666</option>
+		</select>
+	</body>
+	<script type="text/javascript">
+		var oSel = document.getElementById("sel");
+		var oInp = document.getElementById("inp1");
+		
+		oSel.onchange=function(){		//onchange事件一般只用于文本框(input type=text)和下拉框(<select-option)
+			alert(oSel.value);
+		}
+		oInp.onchange=function(){
+			alert(oInp.value);
+		}
+		/* onchange是文本框中内容发生改变时触发事件
+		 * 可以直接获取select的value值，从而得到option的value
+		 */
+	</script>
+</html>

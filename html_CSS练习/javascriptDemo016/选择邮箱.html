@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oSel1 = document.getElementById("sel1");
+				var oSel2 = document.getElementById("sel2");
+				var oBtn = document.getElementById("btn1");
+				var oOpt1 = oSel1.getElementsByTagName("option");
+				
+				oBtn.onclick=function()
+				{
+					for(var i=0;i<oOpt1.length;i++)
+					{
+						if(oOpt1[i].selected){
+							var temp=oOpt1[i];									
+							//oSel1.removeAttribute(oOpt1[i]);//这行可删除，因为appendChild会删除原来的元素再进行添加
+							oSel2.appendChild(temp);
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<select id="sel1" size="5">
+			<option>111</option>
+			<option>222</option>
+			<option>333</option>
+			<option>444</option>
+			<option>555</option>
+		</select>
+		<input type="button" id="btn1" value="》" />
+		<select id="sel2" size="5">
+			<option>aaa</option>
+			<option>bbb</option>
+		</select>
+	</body>
+</html>

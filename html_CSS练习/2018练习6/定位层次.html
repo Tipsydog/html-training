@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 600px;
+				height: 400px;
+				background-color: #000000;
+				position: relative;
+			}
+			.red{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: absolute;
+				top: 200px;left: 200px;
+				z-index: 2;
+			}
+			.green{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				position: absolute;
+				top: 100px;left: 100px;
+				z-index: 1;
+			}
+			/*两个同级div都设定了position，如果div发生重叠那么可以设置z-index属性
+			  z-index值越大显示约靠前
+			  在一个页面中z-index值最好不要超过30*/
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="red"></div>
+			
+			<div class="green"></div>
+		</div>
+	</body>
+</html>

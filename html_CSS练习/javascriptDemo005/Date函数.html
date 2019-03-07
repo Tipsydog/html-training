@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			当前日期：<span id="year"></span>年<span id="mouth"></span>月<span id="date"></span>日<span id="hours"></span>点<span id="minutes"></span>分<span id="seconds"></span>秒
+		</div>
+	</body>
+	<script type="text/javascript">
+		var byear = document.getElementById("year");
+		var bmouth = document.getElementById("mouth");
+		var bdate = document.getElementById("date");
+		var bhours = document.getElementById("hours");
+		var bminutes = document.getElementById("minutes");
+		var bseconds = document.getElementById("seconds");
+		
+		setInterval(function(){
+			
+		var oDate = new Date();		
+		var aYear = oDate.getYear();		//getYear()是计算从1900年至今的年数，，1900年也可以称为计算机的元年
+		var aYearnow = oDate.getFullYear();		//getFullYear()是获取当前公元年
+		var aMounth = oDate.getMonth()+1;		//getMonth()获取的月份是0-11，所以要在原本getMonth的基础上+1
+		var aDay = oDate.getDay();		//getDay()是获取当前星期数
+		var aDate = oDate.getDate();		//getDate()是获取当前日期
+		var aHours = oDate.getHours();		//getHours()获取当前小时
+		var aMinutes = oDate.getMinutes();		//getMinutes()获取当前分钟
+		var aSeconds = oDate.getSeconds();		//getSeconds()获取当前秒数
+		
+		if(aSeconds<10){
+			aSeconds = "0" + aSeconds;		//这样就会让1-9秒变成，01-09秒
+		}
+		
+		byear.innerHTML = aYearnow;
+		bmouth.innerHTML = aMounth;
+		bdate.innerHTML = aDate;
+		bhours.innerHTML = aHours;
+		bminutes.innerHTML = aMinutes;
+		bseconds.innerHTML = aSeconds;
+		},1000)
+		
+//		var oDate = new Date();		
+//		var aYear = oDate.getYear();		//getYear()是计算从1900年至今的年数，，1900年也可以称为计算机的元年
+//		var aYearnow = oDate.getFullYear();		//getFullYear()是获取当前公元年
+//		var aMounth = oDate.getMonth()+1;		//getMonth()获取的月份是0-11，所以要在原本getMonth的基础上+1
+//		var aDay = oDate.getDay();		//getDay()是获取当前星期数
+//		var aDate = oDate.getDate();		//getDate()是获取当前日期
+//		var aHours = oDate.getHours();		//getHours()获取当前小时
+//		var aMinutes = oDate.getMinutes();		//getMinutes()获取当前分钟
+//		var aSeconds = oDate.getSeconds();		//getSeconds()获取当前秒数
+//		
+//		byear.innerHTML = aYearnow;
+//		bmouth.innerHTML = aMounth;
+//		bdate.innerHTML = aDate;
+//		bhours.innerHTML = aHours;
+//		bminutes.innerHTML = aMinutes;
+//		bseconds.innerHTML = aSeconds;
+//		
+	</script>
+</html>

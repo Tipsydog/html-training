@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oTxtarea1 = document.getElementById("txtarea1");
+				var oTxtarea2 = document.getElementById("txtarea2");
+				var oBtn1 = document.getElementById("btn1");
+				var re = /傻逼|草拟吗/
+				
+				oBtn1.onclick=function()
+				{
+					oTxtarea2.value=oTxtarea1.value.replace(re,"**");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id="txtarea1"></textarea><br />
+		<input type="button" id="btn1" style="width: 50px;" value="过滤"/><br />
+		<textarea id="txtarea2"></textarea><br />
+	</body>
+
+</html>

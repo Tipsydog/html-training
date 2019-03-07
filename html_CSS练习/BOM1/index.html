@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 150px;
+				background-color: red;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.onclick=function(){
+					oDiv1.innerHTML=window.screenLeft;
+					/* 
+					 * screenLeft/screenTop：获取浏览器对于屏幕的距离
+					 * screenLeft/screenTop可不加（window.）使用，也就是独立使用
+					 * screenX/screenY作用和screenLeft/screenTop一模一样
+					 * screenLeft/screenTop是微软标准；screenX/screenY是火狐标准
+					 * 
+					 */
+					oDiv1.innerHTML=window.innerHeight;
+					/* 
+					 * window.innerWidth：获取浏览器宽度
+					 * window.innerHeight：获取浏览器除头部以外的高度
+					 */
+					oDiv1.innerHTML=window.outerHeight;
+					/*
+					 * window.outerHeight：获取浏览器的高度，包括头部
+					 */
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

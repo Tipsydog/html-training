@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				//字面方式，Json方式
+				var obj1 = {
+					name:"seven",			//注意是逗号
+					color:"red",
+					age:"3"
+				}
+				//alert(obj1.age)
+				
+				//构造函数创建方式
+				var obj2 = new Object();
+				obj2.name="seven";
+				obj2.color="blue";
+				obj2.age="3";
+				//alert(obj2.color);
+				
+				//ECMA2015/ECMA6创建方式
+				var obj3 = Object.create({
+					name:"seven",			//注意是逗号
+					color:"yellow",
+					age:"3"
+				});
+				alert(obj3.age);				//大部分公司推荐第三种创建方式
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

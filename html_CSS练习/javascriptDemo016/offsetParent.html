@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 500px;
+				height: 500px;
+				background-color: blue;
+				position: relative;				/*有这句，div2的父级就是div1；没这句div2的父级就是body*/
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oDiv1 = document.getElementsByClassName("div1")[0];
+				var oDiv2 = document.getElementsByClassName("div2")[0];
+				
+				alert(oDiv2.offsetParent);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div2"></div>
+		</div>
+	</body>
+</html>

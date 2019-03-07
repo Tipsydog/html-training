@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 250px;
+				height: 250px;
+				border: red 2px solid;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -125px;
+				margin-left: -125px;
+				overflow: hidden;		
+			}
+			table{
+				width: 350px;
+				height: 350px;
+				position: absolute;
+				top: -50px;
+				left: -50px;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oTab =document.getElementById("tab1");
+				var oTd = oTab.getElementsByTagName("td");		//get所有td
+				var oNtr = oTab.getElementsByClassName("ntr");
+				var x = 0;
+				
+				for(var i=0;i<oTd.length;i++)
+				{
+					oTd[i].index=i;		//知道点击的是哪个option
+					oTd[i].num=0;		//用于判断黑白
+					oTd[i].onclick=function()
+					{
+						if(this.num == 0){
+							this.style.backgroundColor="black";		
+							this.num=1;
+						}else{
+							this.style.backgroundColor="white";
+							this.num=0;
+						}//click格子
+						
+						if(oTd[this.index-7].num == 0){
+							oTd[this.index-7].style.backgroundColor="black";
+							oTd[this.index-7].num=1;
+						}else{
+							oTd[this.index-7].style.backgroundColor="white";
+							oTd[this.index-7].num=0;
+						}//上面格子
+						
+						if(oTd[this.index+7].num == 0){
+							oTd[this.index+7].style.backgroundColor="black";
+							oTd[this.index+7].num=1;
+						}else{
+							oTd[this.index+7].style.backgroundColor="white";
+							oTd[this.index+7].num=0;
+						}//下面格子
+						
+						if(oTd[this.index-1].num == 0){
+							oTd[this.index-1].style.backgroundColor="black";
+							oTd[this.index-1].num=1;
+						}else{
+							oTd[this.index-1].style.backgroundColor="white";
+							oTd[this.index-1].num=0;
+						}//左面格子
+						
+						if(oTd[this.index+1].num == 0){
+							oTd[this.index+1].style.backgroundColor="black";
+							oTd[this.index+1].num=1;
+						}else{
+							oTd[this.index+1].style.backgroundColor="white";
+							oTd[this.index+1].num=0;
+						}//右面格子
+						for(var i=0;i<oNtr.length;i++)
+						{
+							if(oNtr[i].num==0){
+								x=0;
+								//break;		//有白色就跳出循环
+								//alert("还有白色");
+							}else{
+								x=1;
+								//alert("成功");
+							}
+						}
+						if(x==0){
+							console.log("游戏继续");
+						}else{
+							setTimeout(function(){
+								alert("成功");
+							},100)							
+						}
+					}					
+				}				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="">
+		<table border="1" id="tab1" cellspacing="" cellpadding="">							
+			<!--1-->
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<!--2-->
+			<tr>
+				<td></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td></td>
+			</tr>
+			<!--3-->
+			<tr>
+				<td></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td></td>
+			</tr>
+			<!--4-->
+			<tr>
+				<td></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td></td>
+			</tr>
+			<!--5-->
+			<tr>
+				<td></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td></td>
+			</tr>
+			<!--6-->
+			<tr>
+				<td></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td class="ntr"></td>
+				<td></td>
+			</tr>
+			<!--7-->
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>

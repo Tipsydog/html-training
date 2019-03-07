@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 800px;
+				height: 150px;
+				background-color: aqua;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.onclick=function(){
+					oDiv1.innerHTML=window.history.length;
+					//当前页面向后跳转的次数，当前页面的历史记录
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<a href="http://www.baidu.com">baidu</a><br />
+		<a href="test.html">test</a>
+		<input type="button" value="forward" onclick="window.history.forward()" />
+		<!--
+			window.history.forward()功能同浏览器的前进按钮
+		-->
+	</body>
+</html>

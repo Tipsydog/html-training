@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str = "Abcdefgac";
+		var str2 = "hello 123 89 72a t3";
+		
+		//var re = new RegExp("a");		//正则的一种写法，因为下面比较简单所以一般都应下面的方式
+		//var re = /a/;		//简单写法
+		//var re = /a/i;		//i代表不区分大小写
+		//alert(str.search(re));			//search：字符串搜索返回字符串位置
+		
+		//var re = /\d+/g;
+		/* \d表示识别数字			//结果是1
+		 * +的意思是可以有多个	//结果是123
+		 * g的意思是在整个字符串中匹配		//结果是123，89，72，3
+		 */
+		//alert(str2.match(re));			//match：获取匹配的项目
+		
+		var re = /a/i;
+		alert(str.replace(re,"JavaScript"));		//replace找到re并替换
+		//这个方式可以做到网页上过滤敏感词
+	</script>
+</html>

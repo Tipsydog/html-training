@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{
+				width: 100px;height: 200px;
+				background-color: blue;
+				overflow: scroll;		/*给div加上滚动条*/
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oDiv1 = document.getElementsByClassName("div1")[0];
+				oDiv1.onscroll=function()
+				{
+					alert("div在滚动");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="div1">
+			<pre>
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasfadfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+adfadfaf
+adfadfa
+adfasf
+			</pre>
+		</div>
+	</body>
+</html>

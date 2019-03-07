@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="new_file.html" method="get">
+			<!--
+            action的内容是点击按钮以后跳转到的地址，跳转是将form一起提交给new_file.html页面
+            -->
+			用户名：<input type="text" value="默认信息" size="30" maxlength="10"/><br /> <!--br是换行-->
+			<!--
+				text为可以输入信息的文本框
+				value是文本框中默认的显示信息
+				size是文本框宽度，默认值是20
+				maxlength是文本框中最大文字长度
+			-->
+			密码：<input type="password"/><br />
+			<!--passwo为可以输入密码的文本框-->
+			性别：<input type="radio" name="sex"/>男<input type="radio" name="sex"/>女<input type="radio" name="sex"/>未知<br />
+			<!--type：radio是单选按钮
+				type可以用name属性分组，使得只能选择其中一项-->
+			爱好：<input type="checkbox" />抽烟<input type="checkbox" checked="checked" />喝酒<input type="checkbox" />烫头<br />
+			<!--type:checkbox是复选框
+				同组复选框必须具有相同的name名称
+				checked属性实现默认选定
+			-->
+			所在班级：
+			<select><!--select下拉选择框标签，option是选项-->
+				<optgroup label="1号"></optgroup><!--optgroup是标签分组，optgroup：label属性是每组的名称-->
+				<option>滑雪</option>
+				<option>速降</option>
+				<option>赛车</option>
+				<optgroup label="2号"></optgroup>
+				<option>攀岩</option>
+				<option>跳伞</option>
+				<option selected="selected">潜水</option><!--selected是下拉框默认选项-->
+			</select><br />
+			个人简介：<textarea cols="10" rows="6"></textarea>
+			<!--多行文本框，cols确定文本框宽度是几个字符（汉子占两个字符），rows确定文本框行数-->
+			
+			<input type="submit" value="提交"/><!--submit是提交按钮-->
+			<input type="reset"  value="重置" /><!--reset是重置-->
+			<input type="button" value="自定义按钮" /><!--button为空按钮，是在js阶段用的较多的自定义按钮-->
+			<input type="image" src="img/G0029585.JPG" width="200"/><!--和submit的功能是相同的-->
+			<input type="file"  value="" /><!--提交上传文件使用-->
+		</form>
+	</body>
+</html>

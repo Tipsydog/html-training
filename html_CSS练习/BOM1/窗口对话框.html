@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 150px;
+				background-color: aqua;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv1 = document.getElementById("div1");
+				oDiv1.onclick=function(){
+//					var a = confirm("确认变高？");
+//					if(a==true){
+//						oDiv1.style.height=300+"px";
+//					}
+
+					var b = prompt("1+1=?");
+					if(b==2){
+						oDiv1.style.height=300+"px";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

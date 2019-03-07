@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.span1{
+				color: red;
+				font-size: 14px;
+				margin-left: 20px;
+			}
+			.span2{
+				color: green;
+				font-size: 14px;
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		用户名：<input type="text" id="userName" /><span id="userInfo" class="span1" >长度在4-12位之间</span><br />
+		密码：<input type="password" id="passWord" /><span id="passInfo" class="span1" ></span><br />
+		<input type="button" id="btn1" value="提交" />
+	</body>
+	<script type="text/javascript">
+		var oUserName = document.getElementById("userName");
+		var oPassWord = document.getElementById("passWord");
+		var oUserInfo = document.getElementById("userInfo");
+		var oPassInfo = document.getElementById("passInfo");
+		var oBtn1 = document.getElementById("btn1");
+		
+		oUserName.onchange=function()
+		{
+			if(oUserName.value.length<4)
+			{
+				oUserInfo.innerHTML="*用户名长度不能小于4";
+				oUserInfo.className="span1";
+			}else if(oUserName==""){
+				oUserInfo.innerHTML="*用户名不能为空";
+				oUserInfo.className="span1";
+			}else if(oUserName.value.length>12){
+				oUserInfo.innerHTML="*用户名长度不能大于12";
+				oUserInfo.className="span1";
+			}else{
+				oUserInfo.className="span2";
+				oUserInfo.innerHTML="用户名可用";
+			}
+		}
+		
+		oPassWord.onchange=function()
+		{
+			if (oPassWord.value=="") 
+			{
+				oPassInfo.innerHTML="*密码不能为空";
+				oPassInfo.className="span1";
+			}else if(oPassWord.value.length<6){
+				oPassInfo.innerHTML="*密码长度不能小于6位";
+				oPassInfo.className="span1";
+			}else if(oPassWord.value.length>15){
+				oPassInfo.innerHTML="*密码长度不能大于15";
+				oPassInfo.className="span1";
+			}else{
+				oPassInfo.innerHTML="√ ";
+				oPassInfo.className="span2";
+			}
+		}
+		
+		oBtn1.onclick=function()
+		{
+			if(oUserName.value.length<4)
+			{
+				oUserInfo.innerHTML="*用户名不能为空";
+				oUserInfo.className="span1";
+			}
+			if (oPassWord.value=="") 
+			{
+				oPassInfo.innerHTML="*密码不能为空";
+				oPassInfo.className="span1";
+			}
+		}
+	</script>
+</html>

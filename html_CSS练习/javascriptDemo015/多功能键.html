@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var oBtn1 = document.getElementById("btn1");
+				oBtn1.onclick=function(ev)
+				{
+					var oEvent = ev||event;
+					if(oEvent.shiftKey){				//也可写成oEvent.shiftKey==1
+						//在if的判断框中，oEvent.shiftKey是一个判断条件，按下shift是true不按是false
+						alert("A");				
+					}
+					if(oEvent.ctrlKey){
+						alert("B");
+					}
+					if(oEvent.altKey){
+						alert("C");
+					}
+					if(oEvent.metaKey){
+						alert("D");					//Linux下才有的键，mac下是command键
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="点击" />
+	</body>
+</html>

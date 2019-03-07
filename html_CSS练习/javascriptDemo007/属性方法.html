@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;height: 200px;
+				background-color: cadetblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+		var oDiv1 = document.getElementById("div1");
+		//oDiv1.style.backgroundColor="red";					正常写法
+		oDiv1.style["backgroundColor"]= "red";			//属性写法
+		//oDiv1.style["属性"]= "属性值";
+	</script>
+</html>

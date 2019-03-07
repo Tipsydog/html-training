@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+			//var oLi = document.getElementsByClassName("l1");			//低版本IE不支持
+			var oLi = document.getElementsByTagName("li");
+			alert(oLi.length);
+			for(var i=0;i<oLi.length;i++)
+			{
+				if(oLi[i].className=="l1")
+				{
+					oLi[i].style.backgroundColor="red";
+				}
+			}
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li class="l1"></li>
+			<li></li>
+			<li class="l1"></li>
+		</ul>
+	</body>
+</html>
